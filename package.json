@@ -2,14 +2,12 @@
   "homepage": "https://pandassi.github.io/chatty-app/",
   "name": "chatty-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "npm run start:client",
     "start:client": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir build"
+    "build": "parcel build src/index.html --out-dir build --public-url ./"
   },
   "keywords": [],
   "author": "",
