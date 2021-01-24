@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { useState } from "react";
-import moment from "moment";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 
@@ -75,7 +74,6 @@ const GifSearch = (props) => {
 									src={image}
 									onClick={() => {
 										setSelectedImage(image);
-										// console.log("selected", selectedImage);
 									}}
 								/>
 							</div>
