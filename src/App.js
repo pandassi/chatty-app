@@ -1,7 +1,7 @@
 import socketIOClient from "socket.io-client";
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import "bootstrap/dist/css/bootstrap.css";
