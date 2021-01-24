@@ -1,0 +1,42 @@
+{
+  "homepage": "https://pandassi.github.io/chatty-app/",
+  "name": "chatty-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "npm run start:client",
+    "start:client": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@giphy/js-fetch-api": "^2.0.1",
+    "@giphy/react-components": "^1.11.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
+    "home": "^2.0.0",
+    "jquery": "1.9.1 - 3",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2",
+    "parcel": "^1.12.4",
+    "popper.js": "^1.16.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.2.0",
+    "react-ui-avatars": "^3.0.2",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

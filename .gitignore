@@ -1,0 +1,35 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+
+# macOS
+.DS_Store
+
+# WebStorm
+.idea
+.vscode
+# Config
+/config.js
+
+# yarn error log
+yarn-error.log
+
+# Config files used with sublime-text
+/.eslintrc.js
+.eslintrc.json
+*.sublime-*
+
+.cache/**/*
+.dist/**/*
+
+server.js
+dist/
+build/
