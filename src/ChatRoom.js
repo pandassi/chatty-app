@@ -41,7 +41,6 @@ const ChatRoom = (props) => {
 	};
 
 	const { username } = useParams();
-
 	const socket = useMemo(
 		() =>
 			socketIOClient(
@@ -55,6 +54,7 @@ const ChatRoom = (props) => {
 			socket.emit("username", username);
 			setUsers((users) => [...users, { name: username, id: 1, text: message }]);
 		});
+
 		socket.on("user-connected", (user) => {
 			setUsers((users) => [...users, user]);
 		});
@@ -76,13 +76,6 @@ const ChatRoom = (props) => {
 			}
 			setUserTyping(typers);
 		});
-
-		socket.on("user-stopped-typing-server", (user) => {
-			const updatedUsers = userTyping.filter(
-				(currentUser) => currentUser !== user.username
-			);
-			setUserTyping(updatedUsers);
-		});
 	}, []);
 
 	function timeoutFunction() {
@@ -91,7 +84,8 @@ const ChatRoom = (props) => {
 	}
 
 	function handleKeyDown(event) {
-		if (48 <= event.keyCode <= 57 || 65 <= event.keycode <= 90) {
+		//keyCode = deprecated, my bad
+		if (48 <= event.keyCode <= 57 || 65 <= event.keyCode <= 90) {
 			socket.emit("typing", { status: true });
 			timeout = setTimeout(timeoutFunction, 3000);
 		}
