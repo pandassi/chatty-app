@@ -1,2 +1,2 @@
 
-Completed in about a week.
+Test completed in about a week.
